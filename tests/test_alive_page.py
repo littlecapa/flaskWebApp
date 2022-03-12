@@ -17,6 +17,10 @@ class BasicTests(unittest.TestCase):
         response = app.test_client().get("/alive")
         assert response.status_code == 200
         assert b"About This App" in response.data
+    
+    def test_fail(self):
+        assert 1 == 2
+    
 
 if __name__ == "__main__":
     unittest.main()
