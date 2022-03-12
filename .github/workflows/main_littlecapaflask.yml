@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'littlecapaFlask'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CC54DC68744644E4AFFBDE841E65E967 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_571E034A20D049C5BD0EFE50ED7EE53C }}
