@@ -10,7 +10,7 @@ from app import app
 class BasicTests(unittest.TestCase):
 
     def setUp(self):
-        #print("Start")
+        print("Start")
 
     def test_alive_page(self):
 
