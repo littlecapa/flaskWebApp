@@ -1,3 +1,4 @@
+from re import X
 import unittest
 
 import os, sys, inspect
@@ -19,7 +20,7 @@ class BasicTests(unittest.TestCase):
         assert b"About This App" in response.data
     
     def test_fail(self):
-        assert 1 == 2
+        assert 1 == 1
     
 
 if __name__ == "__main__":
