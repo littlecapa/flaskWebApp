@@ -31,7 +31,9 @@ jobs:
         run: pip install -r requirements.txt
         
       - name: Unit Tests
-        run: py.test
+        run: |
+          pip install pytest
+          pytest
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
       
