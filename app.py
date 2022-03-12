@@ -8,6 +8,12 @@ def index():
    print('Request for index page received')
    return render_template('index.html')
 
+@app.route('/alive')
+def alive():
+   print('App is alive')
+   return render_template('alive.html')
+
+
 
 @app.route('/hello', methods=['POST'])
 def hello():
