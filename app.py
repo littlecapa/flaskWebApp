@@ -9,6 +9,8 @@ appinsights = AppInsights(app)
 # define log level to DEBUG
 app.logger.setLevel(logging.DEBUG)
 # see https://blog.jcorioland.io/archives/2018/07/24/how-to-azure-application-insights-python-flask.html
+#
+# to do: https://docs.microsoft.com/de-de/azure/azure-monitor/app/live-stream#get-started
 
 # force flushing application insights handler after each request
 @app.after_request
