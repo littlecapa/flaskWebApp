@@ -1,6 +1,7 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for
 from applicationinsights.flask.ext import AppInsights
+import logging
 
 app = Flask(__name__)
 app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = 'YOUR_INSTRUMENTATION_KEY'
