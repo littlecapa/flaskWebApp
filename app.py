@@ -1,7 +1,18 @@
 from datetime import datetime
 from flask import Flask, render_template, request, redirect, url_for
-app = Flask(__name__)
+from applicationinsights.flask.ext import AppInsights
 
+app = Flask(__name__)
+app.config['APPINSIGHTS_INSTRUMENTATIONKEY'] = 'YOUR_INSTRUMENTATION_KEY'
+appinsights = AppInsights(app)
+# define log level to DEBUG
+app.logger.setLevel(logging.DEBUG)
+
+# force flushing application insights handler after each request
+@app.after_request
+def after_request(response):
+    appinsights.flush()
+    return response
 
 @app.route('/')
 def index():
@@ -10,7 +21,8 @@ def index():
 
 @app.route('/alive')
 def alive():
-   print('App is very alive')
+   print('App is very much alive')
+   app.logger.debug('This is a debug log message for alive')
    return render_template('alive.html')
 
 
