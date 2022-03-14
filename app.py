@@ -10,7 +10,7 @@ def index():
 
 @app.route('/alive')
 def alive():
-   print('App is alive')
+   print('App is very alive')
    return render_template('alive.html')
 
 
